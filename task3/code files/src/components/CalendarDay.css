@@ -1,0 +1,135 @@
+.calendar-day {
+  min-height: 120px;
+  padding: 8px;
+  border-right: 1px solid #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+  background: white;
+}
+
+.calendar-day:last-child {
+  border-right: none;
+}
+
+.calendar-day:hover {
+  background: #f8f9fa;
+}
+
+.calendar-day.today {
+  background: #e3f2fd;
+  border: 2px solid #2196f3;
+}
+
+.calendar-day.other-month {
+  background: #f8f9fa;
+  color: #adb5bd;
+}
+
+.calendar-day.drag-over {
+  background: #e8f5e8;
+  border: 2px dashed #4caf50;
+}
+
+.day-number {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.day-events {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.event-item {
+  background: #3174ad;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.event-item.Work {
+  background: #3174ad;
+}
+
+.event-item.Personal {
+  background: #e74c3c;
+}
+
+.event-item.Health {
+  background: #2ecc71;
+}
+
+.event-item.Social {
+  background: #f39c12;
+}
+
+.event-item.Travel {
+  background: #9b59b6;
+}
+
+.event-item.Other {
+  background: #1abc9c;
+}
+
+.event-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-time {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
+.more-events {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  padding: 2px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.more-events:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .calendar-day {
+    min-height: 80px;
+    padding: 4px;
+  }
+
+  .day-number {
+    font-size: 12px;
+  }
+
+  .event-item {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+
+  .event-time {
+    display: none;
+  }
+}

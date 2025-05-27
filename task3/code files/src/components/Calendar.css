@@ -1,0 +1,134 @@
+.calendar-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.calendar-navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-button {
+  background: #3174ad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.2s;
+}
+
+.nav-button:hover {
+  background: #2563a6;
+}
+
+.current-month {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  min-width: 200px;
+  text-align: center;
+}
+
+.calendar-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.category-filter {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background: white;
+}
+
+.calendar-grid {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.calendar-header-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.calendar-header-cell {
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #495057;
+  border-right: 1px solid #e9ecef;
+}
+
+.calendar-header-cell:last-child {
+  border-right: none;
+}
+
+.calendar-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid #e9ecef;
+}
+
+.calendar-row:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .calendar-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calendar-navigation {
+    justify-content: center;
+  }
+
+  .calendar-filters {
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .current-month {
+    font-size: 20px;
+  }
+}
