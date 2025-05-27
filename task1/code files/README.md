@@ -146,4 +146,4 @@ src/
 
 ---
 
-Built with ❤️ using React and modern web technologies.
+Built with using React and modern web technologies.
